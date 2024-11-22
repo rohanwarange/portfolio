@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rohan Warange Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+.about-img img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover; /* Ensures the image scales properly */
+}
+
+.rounded-image {
+    border-radius: 50%; /* Makes the image circular */
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Ensure it's a square */
+    object-fit: cover; /* Ensures the image doesn't distort */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Rohan Warange</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Rohan Warange</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Software Engineer  ',
+						'Trader  ',
+						'Invester   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Full Stack Developer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/rohan-warange-1246ab238/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/rohanwarange" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+						
+					</div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid b-shadow-a rounded-image" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Rohan Warange</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Full Stack Developer</span></p>
+										<p><span class="title-s">Experience: </span> <span>2 Years 5 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Navi Mumbai, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>JAVA</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>SQL</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>SPRING BOOT</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>AWS</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>ANGULAR</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>MONGODB</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>MICROSERVICES</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About Me</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I am a passionate Software Engineer with 2+ years of experience at Accenture,
+									where I contribute as a Full-Stack Developer. My expertise spans a variety of technologies, 
+									including Java, Angular, Microservices, Spring Boot, and AWS. 
+									I have been part of multiple projects, showcasing my ability to design and develop robust, 
+									scalable applications.
+									I enjoy tackling complex challenges and delivering high-quality solutions that drive business value.
+									Beyond coding, I am committed to continuous learning and staying updated with 
+									emerging trends in software development. 
+									My goal is to excel in crafting innovative solutions while growing my technical skills and 
+									professional impact.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Full Stack Developer </span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Computer Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Marathi</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Gcp, , Docker, Git, JIRA, Kubernet &amp; SEO</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Fitness, Reading</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/rohan-warange-1246ab238/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>with more than 2 years at Accenture, proficient in Java, Angular, Microservices, Spring Boot, and AWS. Passionate about designing scalable, high-performing applications and solving complex problems.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">10 Oct 2022 – Current</span>
+						<h2>Full Stack Developer</h2>
+						<span class="position">Accenture</span>
+
+
+
+                        <p class="mt-4">Projects
+                        <p class="mt-4"> 1 . Avia chatbot For TMO
+
+	                        <ul>
+		                        <li>➢ Developed and maintained APIs using Java and Spring Boot, ensuring seamless communication between various application components.</li>
+		                        <li>➢ Built and optimized endpoints to support chatbot functionality, enabling efficient data exchange and enhanced user interaction.
+		                        </li>
+	                        	<li>➢Conducted Splunk analysis for monitoring application performance, identifying anomalies, and ensuring system reliability.
+		                        </li>
+								<li>➢ Collaborated with stakeholders to analyze BPD (Business Process Document) and align technical implementation with business requirements.</li>
+		                        <li>➢ Led API discovery processes, identifying and integrating suitable APIs to enhance chatbot capabilities and meet project goals.
+
+		                        </li>
+	                        	<li>➢CPerformed bug detection and resolution, ensuring high-quality deliverables by addressing issues proactively.
+		                        </li>
+	                            </ul>							
+                        </p>
+
+						<p class="mt-4"> 2. Nationwide Saving Implementations 
+							<ul>
+								<li>➢ Analyzing the new requirements and Designing the application based on 
+									the requirements provided by Product Owner/BA.</li>
+								<li>➢ Worked on Individual functionality of the application using Spring Boot.
+								</li>
+								<li>➢ Worked on building endpoints for the application to communicate back 
+									and forth using Restful API.</li>
+								<li> ➢ Creating the Query related things using JPA Repository.
+								</li>
+								<li> ➢ Effectively Interacted with the team members on queries related to the 
+									requirements.</li>
+								<li> ➢ In an addition, handled Testing methodologies, prepare Test cases and 
+									executed successfully.</li>
+								<li> ➢ Involved in Development and Maintenance of the application.
+								</li>
+							</ul>
+						</p>
+
+						<p class="mt-4">3. Gen Ai POC Insurance Domain
+
+							<ul>
+								<li>➢ Create an automated source to target mapping using Gen AI and NLP 
+									and generate a STTM document.</li>
+								<li>➢ Using generated STTM document generate a automated SQL quires.
+								</li>
+								<li>➢ Create a question answering model based on insurance domain.
+								</li>
+							</ul>							
+						</p>
+
+						<p class="mt-4">4. Accenture Internal Projects
+ 
+							<ul>
+								<li>➢ Analysed project requirements for effective development.
+								</li>
+								<li>➢ Implemented responsive UI using React.
+								</li>
+								<li>➢ Developed server-side logic in JAVA. Managed databases for efficient 
+									data handling.</li>
+								<li>➢ Optimized database queries for performance.
+									</li>
+							</ul>
+						</p>
+					</p>
+						
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">30 Aug 2021 – 29 Nov 2021</span>
+						<h2>Intern Programmer
+						</h2>
+						<span class="position">TECHMIHIRNAIK GROUP</span>
+						<p class="mt-4">Projects
+						<p class="mt-4">Foodica 
+							<ul>
+								<li>➢Work on frontend technologies.</li>
+								<li>➢ Support on database operations on backends.
+								</li>
+								<li>➢ Create an attractive user interfaces.
+								</li>
+
+							</ul>
+						</p>
+					</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018-2022</span>
+    					<h2>Bachelor of Computer Engineering</h2>
+    					<span class="position">SSPM College Of Engineering,Kankavli
+						</span>
+    					<p class="mt-4">Grade: 8.2 CGPA</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2017-2018</span>
+    					<h2>HSC</h2>
+    					<span class="position">U.P.L Patil College,Kharepatan
+						</span>
+    					<p class="mt-4">Grade: 69.38 %</p>
+    				</div>
+				</div>
+
+				<div class="col-md-6"></div>
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2017-2018</span>
+    					<h2>SSC</h2>
+    					<span class="position">S.N.M Vidyalaya, Kharepatan
+
+						</span>
+    					<p class="mt-4">Grade: 88.80 %</p>
+    				</div>
+				</div>
+    		</div>
+			<br>
+			<br>
+			<div class="row">
+				<h1 class="big-4">Certifications</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			
+				<div class="row">
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">oct 2022</span>
+							<h2>Java Full Stack Engineer </h2>
+							<span class="position">Accenture LKM
+							</span>
+							
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">Dec 2023</span>
+							<h2>Oracle Certified Professional,Java EE Application Developer
+							</h2>
+							<span class="position">Oracle
+							</span>
+						</div>
+					</div>
+	
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">jan 2024</span>
+							<h2>Oracle Cloud Infrastructure AI Certified Foundations Associate</h2>
+							<span class="position">Oracle
+							</span>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">jan 2024</span>
+							<h2>Oracle Cloud Infrastructure Certified Foundations Associate</h2>
+							<span class="position">Oracle
+							</span>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">mach-2019</span>
+							<h2>Java Spoken Tutorials </h2>
+							<span class="position">IIT 
+								Bombay
+							</span>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">oct-2019</span>
+							<h2> AIML By Tech Cryptors 
+							</h2>
+							<span class="position">Tech Cryptors
+							</span>
+						</div>
+					</div>
+					
+	
+					
+	
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample projects</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/rohanwarange/HostShield/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/rohanwarange/HostShield/tree/main">QuickResponse: AI-Enhanced Emergency Response System </a></h3>
+                <p>
+					The QuickResponse project is an innovative AI-powered emergency response system designed to revolutionize services like 100, 102, and 108 in India. It addresses critical delays between emergency calls and service dispatch, aiming to save lives through faster, more efficient processes.  
+					
+					At the core of the solution is an AI-driven voicebot that engages callers, collects vital information, and dispatches emergency services instantly. Leveraging natural language processing (NLP), real-time analytics, and location tracking, the system ensures accurate and rapid decision-making.  
+					
+					The voicebot also offers real-time guidance to callers, helping them manage emergencies until professionals arrive. Whether it's CPR instructions or fire safety protocols, the system empowers citizens to take immediate action.  
+					
+					This AI system reduces response times significantly by automating routine information gathering. It frees up human dispatchers to handle complex tasks, enhancing overall efficiency in emergency management.  
+					
+					QuickResponse is highly scalable, capable of managing large call volumes during crises like natural disasters. Its real-time analytics and continuous learning ensure the system improves in accuracy and efficiency over time.  
+					
+					With this solution, emergency services can respond quicker, provide better caller support, and optimize resource allocation. QuickResponse is a leap forward in making public safety systems smarter and more responsive.  
+					
+					Would you like assistance in drafting a technical document or presenting this idea for the Royal Mail Group's Innovation Ninjas challenge?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">HostShield : Automatic Thread Detection and Secure Data Transfer in AWS Cloud</a></h3>
+                <p>  This application enhances security and enables secure data transfer within the AWS Cloud, focusing on threat detection and analytics. It identifies potential risks by analyzing user activities and automatically flags anomalies based on predefined security policies.  
+					
+					A robust mechanism tracks user actions like login events, data uploads, and modifications by recognizing patterns in event prefixes (e.g., "get", "put", "update"). Any suspicious or unauthorized activity, such as accessing resources outside working hours, is flagged for further review.  
+					
+					The application ensures data transfer adheres to strict security guidelines. By monitoring critical operations and access patterns, it prevents accidental or malicious data exposure while maintaining operational efficiency.  
+					
+					It also prepares comprehensive analytics, summarizing user behaviors and activities into actionable insights. Features like "User Ratings" classify users based on the volume and types of actions performed, helping administrators quickly identify high-risk users.  
+					
+					The solution outputs structured data in CSV format for integration with visualization tools like Power BI or Excel, enabling easy report generation and trend analysis. This feature helps organizations maintain compliance and audit readiness.  
+					
+					Built using Python and AWS native tools (like CloudTrail and IAM logs), the application automates data processing and threat analysis, reducing manual intervention and improving response times.  
+					
+					Future enhancements include real-time integration with AWS GuardDuty or Security Hub for advanced threat detection and visualization dashboards for better insights. Expanding with machine learning models can further refine anomaly detection and predict risks proactively.  
+					
+					This project is a step toward secure, efficient, and insight-driven cloud operations, empowering organizations to maintain security and compliance effortlessly.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/rohanwarange/HostShield/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/rohanwarange/HostShield/tree/main">TruckSafe-Routes-Software: Enhancing Road Safety through Advanced Analytics  </a></h3>
+                <p>
+					The TruckSafe-Routes-Software project is an innovative solution to address roadkill-related accidents involving trucks in India. It aims to protect drivers and wildlife by providing real-time alerts and optimizing routes to avoid high-risk areas.  
+					
+					The software integrates GPS and mapping services to deliver live updates about areas prone to wildlife crossings. Using historical and predictive analytics, it suggests safer alternative routes, minimizing the chances of encountering roadkill.  
+					
+					Collaboration with wildlife agencies and machine learning models enables accurate predictions of high-risk zones. The system continuously learns from data, improving the quality and timeliness of its alerts.  
+					
+					A user-friendly dashboard ensures drivers receive visual and audio warnings without distractions. The software also includes a community reporting feature, allowing users to share real-time roadkill sightings to enhance prediction accuracy.  
+					
+					To support long-term safety, the software educates drivers on best practices for avoiding accidents involving wildlife. These safety tips are accessible directly within the application.  
+					
+					TruckSafe-Routes-Software reduces accidents, protecting truck drivers and minimizing vehicle damage. It also contributes to environmental conservation by reducing wildlife fatalities and empowering the community to engage in road safety initiatives.  
+					
+					This scalable and seamless solution is designed to integrate into existing trucking systems, offering a practical approach to improving road safety through advanced analytics and collective efforts.  
+					</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rohanwarange/HostShield/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rohanwarange/HostShield/tree/main">VisionPro: AI-Assisted Object Detection for the Visually Impaired </a></h3>
+				  <p> 
+
+					VisionPro is an innovative application designed to empower visually impaired individuals by enabling real-time object detection and identification. By transforming a smartphone camera into an artificial eye, it fosters greater independence and confidence in navigating daily life.  
+					
+					The mobile application leverages IBM Watson’s Speech-to-Text and Visual Recognition APIs. Users can give voice commands to locate specific objects, and the system provides auditory feedback on the object's presence and location, making interaction seamless and intuitive.  
+					
+					On the backend, VisionPro employs advanced image classifiers to analyze photos and detect objects with high accuracy. Regular updates to the classifiers ensure continuous improvement and adaptability to new use cases.  
+					
+					The app is designed with accessibility in mind, featuring a simple, user-friendly interface that prioritizes voice feedback over visual elements. This makes it suitable for individuals with varying levels of visual impairment.  
+					
+					VisionPro offers significant benefits, including enhanced independence by allowing users to complete tasks without assistance. It simplifies daily routines, improves quality of life, and reduces reliance on others for basic activities.  
+					
+					Scalable and flexible, the system can accommodate an ever-expanding list of recognizable objects, adapting to the users' evolving needs. With its real-time feedback, VisionPro ensures users stay informed about their surroundings instantly.  
+					
+					This pioneering solution bridges the gap between the visually impaired and their environment, opening new possibilities for accessibility and inclusion.  
+					
+					</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rohanwarange/HostShield/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rohanwarange/HostShield/tree/main">Auto Quoter Pro: AI Chat and VIN Decoder Integration </a></h3>
+				  <p> 
+
+					Auto Quoter Pro is an advanced mobile web app designed to streamline the auto insurance quoting process. By combining modern web technologies and AI, it delivers accurate and effortless insurance quotes, enhancing the user experience.  
+					
+					The application leverages React for dynamic and responsive interfaces, Vite for fast builds and development, and TailwindCSS for sleek and adaptive design. These technologies ensure a seamless experience across all devices, making the tool accessible for users on the go.  
+					
+					An assistive AI chatbot, powered by the Chat GPT 3.5 API, guides users through the quoting process, answering their queries and offering personalized assistance. This conversational feature simplifies navigation and ensures users are supported at every step.  
+					
+					The integration of a VIN decoder API automates the retrieval of vehicle details, reducing manual data entry and improving quote accuracy. Users can quickly generate quotes without worrying about entering detailed information manually.  
+					
+					Key benefits include efficiency, with faster and more accurate quoting; user-friendly accessibility, thanks to its responsive design; and enhanced customer experience, driven by the interactive AI chatbot. The architecture is also scalable, capable of handling growing user bases while maintaining consistent performance.  
+					
+					With secure user authentication and data encryption, Auto Quoter Pro ensures compliance with industry standards and safeguards user information. It is a robust solution that blends technology and user-focused design to revolutionize the auto insurance quoting process.  
+					</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/rohanwarange" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p> Navi Mumbai, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 8080358145</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">rohanwarange24@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/eqYk5CPu37AmArmg8" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/rohan-warange-1246ab238/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://www.facebook.com/share/14n18gYnPf/?mibextid=LQQJ4d"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/er_rohan_official/profilecard"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Rohan</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
